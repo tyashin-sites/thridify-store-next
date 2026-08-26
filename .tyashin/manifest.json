@@ -1,0 +1,9 @@
+{
+  "projectId": "6a8eb18ca64c21a0d29ad9e1",
+  "slug": "thridify-website-mt9w4pa0",
+  "siteName": "Thridify Store",
+  "framework": "nextjs",
+  "domain": "thridify-website-mt9w4pa0.sites.tyashin.com",
+  "ownsRoutes": ["/", "/products", "/products/[slug]", "/about", "/contact"],
+  "tyashinOwnedRoutes": ["/brand-kit.css", "/tyashin-runtime.js", "/sitemap.xml", "/robots.txt"]
+}
