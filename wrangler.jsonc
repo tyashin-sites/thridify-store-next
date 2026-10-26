@@ -14,6 +14,13 @@
       "id": "17f05c72d9ce425e906ce09bbf036c33"
     }
   ],
+  // ISR revalidation queue (open-next.config.ts `queue: doQueue`). Without it
+  // stale pages are never regenerated — tyashin-platform CLAUDE.md §12c-bis.
+  "services": [{ "binding": "WORKER_SELF_REFERENCE", "service": "site-thridify-store-next" }],
+  "durable_objects": {
+    "bindings": [{ "name": "NEXT_CACHE_DO_QUEUE", "class_name": "DOQueueHandler" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["DOQueueHandler"] }],
   "vars": {
     "TYASHIN_API_URL": "https://website-api.tyashin.com",
     "TYASHIN_STOREFRONT_URL": "https://website-api.tyashin.com/api/v1/public/ecommerce",
