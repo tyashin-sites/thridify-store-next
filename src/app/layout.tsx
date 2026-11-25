@@ -39,7 +39,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main>{children}</main>
         <Footer />
-        <script src="/tyashin-runtime.js" defer />
+        {/* data-cfasync="false": keep Cloudflare Rocket Loader from deferring it */}
+        <script data-cfasync="false" src="/tyashin-runtime.js" defer />
       </body>
     </html>
   );
